@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio2</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <div class="active">
+            <a href="#home" class="active scroll">Home</a>
+            <a href="#sobre" class="scroll">Sobre</a>
+            <a href="#servicos" class="scroll">Servicos</a>
+            <a href="#portfolio" class="scroll">Portfolio</a>
+            <a href="#contato" class="scroll">Contato</a>
+            <a href="#projetos" class="scroll">Projetos</a>
+        </div>
+        </nav>
+
+       
+        <!-- teste -->
+
+
+        <!-- end TEST BOX -->
+        <script>
+            const scrollLinks = document.querySelectorAll('.scroll');
+
+            scrollLinks.forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+
+                    const targetId = link.getAttribute('href');
+                    const targetPosition = document.querySelector(targetId).offsetTop;
+                    const startPosition = window.pageYOffset;
+                    const distance = targetPosition - startPosition;
+                    const duration = 1000;
+                    let start = null;
+
+                    window.requestAnimationFrame(step);
+
+                    function step(timestamp) {
+                        if (!start) start = timestamp;
+                        const progress = timestamp - start;
+                        window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+                        if (progress < duration) window.requestAnimationFrame(step);
+                    }
+                });
+            });
+
+            function easeInOutCubic(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t * t + b;
+                t -= 2;
+                return c / 2 * (t * t * t + 2) + b;
+
+                
+            };
+        </script>
+    </header>
+
+    <!-- SECAO HOME -->
+    <div class="home" id="home">
+        <div class="home-content">
+            <h3>Olá, eu sou</h3>
+            <h1>Lívio Ribeiro</h1>
+            <h3>E eu sou um <span>Desenvolvedor Frontend</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, totam!</p>
+            <div class="social-media">
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+            </div>
+            <a href="#" class="btn">Download Curriculo</a>
+        </div>
+        <div class="image-home">
+            <img src="lilicsIAs.jpg" alt="Imagem do HOME">
+        </div>
+    </div>
+    <!-- END SECAO HOME -->
+    <!-- SECAO SOBRE -->
+    <section class="sobre" id="sobre">
+        <div class="sobre-imagem">
+            <img src="LILIWIX.jpg" alt="imagem-sobre">
+        </div>
+        <div class="sobre-content">
+            <h2 class="heading">Sobre <span>Mim</span></h2>
+            <h3>Desenvolvedor Frontend</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ipsum adipisci ipsa amet, ab aliquam ad!
+                Est dolorem cum commodi.</p>
+            <a href="#" class="btn">Mais informações</a>
+        </div>
+    </section>
+    <!-- END SECTION SOBRE -->
+    <!-- SECTION SERVIÇOS -->
+    <div class="servicos" id="servicos">
+        <h2 class="heading">Outros <span>Serviços</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Desenvolvedor Web</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ea tempora nihil magnam et unde,
+                    quis atque quos! Nulla, fugiat.</p>
+                <a href="#" class="btn">Mais Informações</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxs-paint'></i>
+                <h3>Design Grafico</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ea tempora nihil magnam et unde,
+                    quis atque quos! Nulla, fugiat.</p>
+                <a href="#" class="btn">Mais Informações</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxs-paint'></i>
+                <h3>Marketing DIgital</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ea tempora nihil magnam et unde,
+                    quis atque quos! Nulla, fugiat.</p>
+                <a href="#" class="btn">Mais Informações</a>
+            </div>
+        </div>
+    </div>
+    <!-- SECAO PROJETOS PORTIFOLIO -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Meus <span>Projetos</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="IMG1.1.jpg" alt="imagem 1" >
+                <div class="portfolio-layer">
+                    <h4>Design Web</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, assumenda?</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="IMG2.1.png" alt="Areas de atuação">
+                <div class="portfolio-layer">
+                    <h4>Design Web</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, assumenda?</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="IMG3.1.jpg" alt="Areas de atuação">
+                <div class="portfolio-layer">
+                    <h4>Design Web</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, assumenda?</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="IMG4.1.jpg" alt="Areas de atuação">
+                <div class="portfolio-layer">
+                    <h4>Design Web</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, assumenda?</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="IMG5.1.jpg" alt="Areas de atuação">
+                <div class="portfolio-layer">
+                    <h4>Design Web</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, assumenda?</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="IMG6.1.jpg" alt="Areas de atuação">
+                <div class="portfolio-layer">
+                    <h4>Design Web</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, assumenda?</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- END SECAO PROJETOS -->
+    <!-- SECAO CONTATO -->
+    <section class="contato" id="contato">
+        <h2 class="heading">Meu <span>Contato</span></h2>
+        
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Nome completo">
+                <input type="email" placeholder="E-mail">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Numero para contato">
+                <input type="text" placeholder="E-mail reserva">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Escreva sua mensagem"></textarea>
+            <input type="submit" value="Envie sua mensagem" class="btn ">
+        </form>
+    </section>
+    <!-- END SECAO CONTATO -->
+    <!-- SECAO FOOTER -->
+<footer class="footer" id="footer">
+    <div class="footer-text">
+        <p>Copyrigth &copy; 2023 by Codehal | All Rights reserved.</p>
+    </div>
+    
+    <div class="footer-iconTop">
+        <a href="#home"><i class='bx bx-up-arrow-circle' ></i></a>
+    </div>
+</footer>
+<script src="https://unpkg.com/scrollreveal"></script>
+    <!-- ALA DO SCRIPT -->
+    <script src="script.js"></script>
+</body>
+
+</html>
