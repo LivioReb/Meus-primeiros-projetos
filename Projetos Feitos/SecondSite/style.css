@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+html{
+    background: var(--second-bg-color);
+    
+}
+:root{
+--bg-color: #610512; 
+--second-bg-color: #000000;
+--text-color:
+--main-color:
+}
+/* ====================INICIO DA SECTION-===================== */
+
+.section-1-bg{
+    background-image: url(imgbg7.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+aside{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    overflow: hidden;
+}
+
+#icon-menu{
+    width: 45px;
+    height: 45px;
+    margin-right: 25px;
+    margin-top: 15px;
+    color: white;
+    font-size: 3.4rem;
+    cursor: pointer;
+}
+
+#barra-menu{
+    background: var(--second-bg-color); 
+    height: 100vh;
+    width: 0px;
+    transition: 0.3s all;
+}
+
+#barra-menu ul li{
+    list-style: none;
+    padding: 15px;
+}
+
+#barra-menu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    width: 100%;
+}
+
+#barra-menu ul li a:hover{
+    border: solid 1px #7a1515;
+    padding: 8px;
+    border-radius: 15px;
+    background: red;
+    transition: 0.6s;
+    transform: 0,5s;
+}
+
+.C-icon{
+    margin-top: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    overflow: hidden;
+}
+.C-icon span{
+    color: white;
+
+}
+
+.C-icon span:hover{
+    color: red;
+    transition: 0.5s;
+    transform: 0.5s;
+}
+
+.main-title{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    flex-wrap: wrap;
+
+}
+.main-title h1{
+    font-size: 70px;
+    color: #fff;
+    margin-top: 15%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.main-title h2{
+    color: red;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.main-title h5{
+    color:white;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 200;
+
+}
+
+.main-title button{
+    width: 15%;
+    margin-top: 80px;
+    padding: 8px 5px;
+    font-size: 20px;
+    background-color: rgb(194, 1, 49);
+    border-radius: 50px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: .9s;
+}
+
+.main-title button:hover{
+    border: solid 1px white;
+    transition: 0.7;
+    background: transparent;
+}
+
+.numeros{
+    display: flex;
+    margin-top: 35px;
+    color: white;
+    gap: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.title h3{
+    font-size: 35px;
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.title p{
+   font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+
+}
+
+.title:hover{
+     transition: 1.2s;
+     transform: scale(1.1);
+}
+@media screen and (max-width: 414px){
+    .main-title h1{
+        font-size: 40px;
+        margin-top: 10%;
+        margin-right: 15%;  
+    }
+    .main-title h2{
+        font-size: 25px;
+        margin-right: 15%;
+        margin-top: 5%;
+        padding-top: 5%;
+    }
+    .main-title button{
+        width: 150px;
+
+    }
+    .numeros{
+        margin-left: 20px;
+        margin-right: 25%;
+        margin-top: 20%;
+       
+    }
+    .section-1-bg {
+        background-size: contain;
+        background-position: center;
+        margin-left: 0;
+        padding-top: 100px;
+      }
+    .main-title{
+        margin-left: 0;
+    }
+    .main-title button{
+        margin-top: 80x;
+        margin-left: 20px;
+    }
+
+    }
+    
+}
+
+
+
+
