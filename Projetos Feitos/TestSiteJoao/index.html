@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <div>
+            <a href="#" class="logo">Estetica Avançada</a>
+            <h2>Dr. João Pedro - Biomédico</h2>
+        </div>
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <div class="active">
+                <a href="#home" class="active scroll">Home</a>
+                <a href="#sobre" class="scroll">Sobre</a>
+                <a href="#servicos" class="scroll">Serviços</a>
+                <a href="#abordagem" class="scroll">Abordagem</a>
+                <a href="#contato" class="scroll">Contato</a>
+            </div>
+        </nav>
+
+        <script>
+            const scrollLinks = document.querySelectorAll('.scroll');
+
+            scrollLinks.forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+
+                    const targetId = link.getAttribute('href');
+                    const targetPosition = document.querySelector(targetId).offsetTop;
+                    const startPosition = window.pageYOffset;
+                    const distance = targetPosition - startPosition;
+                    const duration = 1000;
+                    let start = null;
+
+                    window.requestAnimationFrame(step);
+
+                    function step(timestamp) {
+                        if (!start) start = timestamp;
+                        const progress = timestamp - start;
+                        window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+                        if (progress < duration) window.requestAnimationFrame(step);
+                    }
+                });
+            });
+
+            function easeInOutCubic(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t * t + b;
+                t -= 2;
+                return c / 2 * (t * t * t + 2) + b;
+
+
+            };
+        </script>
+    </header>
+    <section class="home" id="home">
+        <div class="home-container">
+            <div class="home-text">
+                <h2>Bem-vindo ao meu mundo de beleza e bem-estar!</h2>
+                <h1> Sou João Pedro, uma esteticista profissional apaixonado por beleza e bem-estar.</h1>
+                <p>Meu objetivo é ajudar meus clientes a se sentirem confiantes e radiantes em sua própria pele,
+                    fornecendo tratamentos personalizados e
+                    soluções de cuidados com a pele eficazes.</p>
+            </div>
+            <div class="img-home">
+                <img src="jp111.jpeg" alt="Imagem do home">
+            </div>
+        </div>
+    </section>
+    <section class="sobre" id="sobre">
+        <div class="sobre-container">
+            <div class="img-sobre">
+                <img src="jp22.jpeg" alt="imagem-sobre mim">
+            </div>
+            <div class="sobre-text">
+                <h1>Sobre <span>mim</span> </h1>
+                <h2>Eu sou um esteticista treinada e certificada com anos de experiência na indústria de beleza.</h2>
+
+                <h2> Minha abordagem é holística, abrangendo não apenas tratamentos de beleza, mas também um estilo de
+                    vida saudável e equilibrado.</h2>
+            </div>
+        </div>
+    </section>
+    
+    <section class="servicos" id="servicos">
+        <div class="servicos-container">
+            <h2>Serviços</h2>
+            <p>Ofereço uma variedade de serviços de estética para ajudar meus clientes a alcançarem sua melhor versão.
+                Alguns dos
+                serviços que ofereço incluem:</p>
+        </div>
+        <div class="container-box"> 
+            <div class="servicos-box">
+                <h3>Tratamentos faciais personalizados</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maxime.</p>
+                <a href=""><i class='bx bx-link-external'></i></a>
+            </div>
+            <div class="servicos-box">
+                <h3>Limpeza de pele profunda</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maxime.</p>
+                <a href=""><i class='bx bx-link-external'></i></a>
+            </div>
+            <div class="servicos-box">
+                <h3>Tratamentos faciais personalizados</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maxime.</p>
+                <a href=""><i class='bx bx-link-external'></i></a>
+            </div>
+            <div class="servicos-box">
+                <h3>Tratamentos corporais de redução de celulite</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maxime.</p>
+                <a href=""><i class='bx bx-link-external'></i></a>
+            </div>
+            <div class="servicos-box">
+                <h3>Massagem facial</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maxime.</p>
+                <a href=""><i class='bx bx-link-external'></i></a>
+            </div>
+            <div class="servicos-box">
+                <h3>Depilação com cera</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maxime.</p>
+                <a href=""><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="abordagem" id="abordagem">
+        <h2>Minha Abordagem</h2>
+        <h3>Minha abordagem é baseada em técnicas modernas de cuidados com a pele, combinadas com produtos de alta
+            qualidade para
+            garantir que meus clientes obtenham os melhores resultados possíveis.</h3>
+        <p>Eu uso apenas produtos de marcas confiáveis e de
+            qualidade comprovada.</p>
+        <div class="abordagem-img">
+            <div>
+                <img src="jp33.jpeg" alt="imagem com o certificado ">
+            </div>
+            <div>
+                <img src="jp41.jpeg" alt="imagem com cliente">
+            </div>
+        </div>
+        <div>
+            <p class="footer-abord">
+                Minha abordagem também se concentra em educar meus clientes sobre como cuidar da pele em casa, para que
+                possam manter
+                sua aparência radiante e saudável entre as sessões.
+            </p>
+        </div>
+    </section>
+    <section class="contato" id="contato">
+        <div class="contato-container"></div>
+        <h2 class="heading">Meu <span>Contato</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Nome completo">
+                <input type="email" placeholder="E-mail">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Numero para contato">
+                <input type="text" placeholder="E-mail reserva">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Escreva sua mensagem"></textarea>
+            <input type="submit" value="Envie sua mensagem" class="btn ">
+        </form>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-circle'></i></a>
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+        </div>
+        <div class="footer-text">
+            <p>Copyrigth &copy; 2023 by LivioFrontDeveloper | All Rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
+
+<!-- Seção 1: Bem-vindo ao meu mundo de beleza e bem-estar!
+
+Bem-vindo ao meu site! Sou [seu nome], uma esteticista profissional apaixonado por beleza e bem-estar. Meu objetivo é
+ajudar meus clientes a se sentirem confiantes e radiantes em sua própria pele, fornecendo tratamentos personalizados e
+soluções de cuidados com a pele eficazes. -->
+
+<!-- Seção 2: Sobre mim
+
+Eu sou um esteticista treinada e certificada com anos de experiência na indústria de beleza. Minha abordagem é
+holística, abrangendo não apenas tratamentos de beleza, mas também um estilo de vida saudável e equilibrado.
+
+Acredito que cada cliente é único e, por isso, ofereço soluções personalizadas para atender às necessidades individuais
+de cada pessoa. Estou comprometida em fornecer serviços de alta qualidade com resultados visíveis e duradouros. -->
+
+<!-- Seção 3: Serviços
+
+Ofereço uma variedade de serviços de estética para ajudar meus clientes a alcançarem sua melhor versão. Alguns dos
+serviços que ofereço incluem:
+
+1Tratamentos faciais personalizados
+2Limpeza de pele profunda
+3Massagem facial
+4Tratamentos corporais de redução de celulite
+5Depilação com cera
+6Design de sobrancelhas
+7Maquiagem profissional para eventos -->
+
+<!-- Seção 4: Minha Abordagem
+
+Minha abordagem é baseada em técnicas modernas de cuidados com a pele, combinadas com produtos de alta qualidade para
+garantir que meus clientes obtenham os melhores resultados possíveis. Eu uso apenas produtos de marcas confiáveis e de
+qualidade comprovada.
+
+Minha abordagem também se concentra em educar meus clientes sobre como cuidar da pele em casa, para que possam manter
+sua aparência radiante e saudável entre as sessões. -->
+<!-- 
+Seção 5: Entre em contato comigo
+
+Se você estiver procurando por uma esteticista profissional que possa fornecer soluções personalizadas para suas
+necessidades de beleza e bem-estar, entre em contato comigo hoje mesmo. Estou animada para ajudá-lo a alcançar sua
+melhor versão! -->
