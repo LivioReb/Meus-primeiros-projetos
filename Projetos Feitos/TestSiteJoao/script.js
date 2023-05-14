@@ -58,6 +58,13 @@ for (var i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', function() {
     cont = Array.from(buttons).indexOf(this);
     reiniciarIntervaloSlide(); // Reinicia o intervalo de passagem automática do slide ao clicar em um botão
+
+    // Adicione o código abaixo para alterar a cor de fundo dos botões
+    for (var j = 0; j < buttons.length; j++) {
+      buttons[j].style.backgroundColor = ''; // Limpa a cor de fundo de todos os botões
+      buttons[j].style.boxShadow = ''; // Limpa a cor de fundo de todos os botões
+    }
+    this.style.backgroundColor = 'hsl(192, 80%, 48%)'; // Define a cor de fundo do botão atual como vermelho
+    this.style.boxShadow = 'rgb(14, 178, 184) 0px 0px 1.8px 0.5px'
   });
 }
-

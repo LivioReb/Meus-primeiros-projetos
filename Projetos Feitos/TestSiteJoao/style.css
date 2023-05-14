@@ -109,6 +109,7 @@ section:not(#buttons, #abordagem) {
     padding: 0 auto;
     height: 100%;
     margin-right: 60px;
+    margin-left: 30px;
 }
 
 .home-text h1{
@@ -213,7 +214,24 @@ section:not(#buttons, #abordagem) {
     margin-bottom: 10px;
     margin: 0 40px;
     height: 100%;
+    
 }
+
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .servicos-box{
     display: flex;
     border-radius: 50px;
@@ -228,6 +246,7 @@ section:not(#buttons, #abordagem) {
     align-items: center;
     margin-bottom: 20px;
     transition: .6s ease;
+    animation: floatImage 4s ease-in-out infinite;
 }
 
 .servicos-box h2{
@@ -388,9 +407,14 @@ section#buttons{
     border-radius: 20px;
     width: 100px;
     height: auto;
+    transition: 1s ease;
 }
 .botao button:hover{
-    background: red;
+    letter-spacing: 3px;
+    background-color: hsl(192, 80%, 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(14, 178, 184) 0px 7px 29px 0px;
+
 }
 
 .margin-left {
