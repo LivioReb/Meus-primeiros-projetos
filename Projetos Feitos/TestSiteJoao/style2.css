@@ -8,6 +8,7 @@
     text-decoration: none;
     border: none;
     outline: none;
+    
 
 
 }
@@ -26,7 +27,7 @@ html {
 }
 
 body {
-    background: #e0e0e0;
+    background: var(--second-bg-color);
     color: black;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -39,67 +40,59 @@ header{
     background-attachment: fixed;
     background-image: url("/img-botox/parallax1.png");
         height: 100vh;
-
+display: flex;
+flex-direction: column;
 }
 
-header:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-}
 
 
 .navbar{
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    font-size: 22px;
+    justify-content: space-between;  
+    padding: 15px;
+    background: var(--second-bg-color);
+    height: 12vh;
+    align-items: center;
+    
 }
 .navbar img{
+    height: 60px;
     width: 250px;
 }
-.navbar img:hover{
-    transform: scale(1.2);
-}
-.navlinks{
+.navlinks {
+    width: 50%;
     display: flex;
-    margin-right: 50px;
-    width: 45%;
-    position: absolute;
-    z-index: 9999;
-    right: 40px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-
-.navlinks a{
-    display: flex;
+.navlinks a {
     padding-left: 30px;
     color: var(--text-color);
     font-weight: 500;
     transition: .5s ease-in-out;
-    
-}
+}  
+
 
 .navlinks a:hover{
-    color: var(--main-color);
+    color: hsl(192, 80%, 48%);
+    
 }
-
+.home1{
+    width: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    margin-left: 40px;
+    font-size: 50px;
+}
 section#sobre,#utilidade{
     height: 90vh;
 }
-#home h1{
-    font-size: 90px;
-    color: #8ba9c4;
-    position: absolute;
-    right: 250px;
-    top: 250px;
-    font-weight: 900;
-    font-family: 'Poppins', sans-serif;
-}
+
+
 .parallax{
     height: 90vh;
     background-position: center;
@@ -125,10 +118,7 @@ section#sobre,#utilidade{
     background-image: url("/img-botox/parallax3.png");
 }
 
-.parallax1 h1{
-    
 
-}
 
 .parallax2{
     background-image: url("/img-botox/parallax2.png");
@@ -177,8 +167,83 @@ section#sobre,#utilidade{
     font-size: 30px;
     margin-top: 30px;
 }
+#bloco1, #bloco2, #bloco3, #bloco4{
+    height: 100vh;
+    background: var(--second-bg-color);
+}
 
+ .container{
+    height: 100vh;
+    background: var(--second-bg-color);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+   
+ }
+ 
 
- section .bloco{
-    height: 90vh
+ .img-container img{
+    width: 120%;
+    height: 100vh;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+ }
+ 
+ #bloco2 .img-container{
+        position: relative;
+        z-index: 2; 
+ }
+ #bloco2 .txt-container{
+    position: relative;
+  z-index: 1;
+ }
+ #bloco4 .img-container{
+    width: 52%;
+ }
+
+ #bloco3 .img-container{
+    width: 55.5%;
+ }   
+ .txt-container{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: auto auto;
+    margin-right: 50px ;
+    border-radius: 5px;
+background: linear-gradient(145deg, #95b5d2, #798591);
+box-shadow: 0px 0px 50px #2d4d69,
+            0px 0px 0px #5388b6;
+    height: 90%;
+    margin-left: 0px;
+    padding: 50px;
+    animation: floating 5s ease-in-out infinite; 
+ }
+
+ @keyframes floating {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-25px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+ .txt-container h2{
+    font-size: 4rem;
+    font-weight: 700;
+
+ }
+
+ .txt-container p{
+    font-size: 2rem;
+    font-weight: 500;
+ }
+ 
+ #bloco2, #bloco4 .txt-container{
+    margin-left: 50px;
  }

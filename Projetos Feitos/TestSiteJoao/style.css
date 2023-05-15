@@ -529,6 +529,26 @@ section#buttons{
         color: hsl(0, 0%, 100%);
        }
 
+       .loc{
+        font-size: 3rem;
+        color: var(--main-color);
+        border-radius: 50%;
+       display: inline-flex;
+       align-items: center;
+       justify-content: space-evenly;
+       background: transparent;
+       width: 4rem;
+       height: 4rem;
+       border: .2rem solid var(--main-color);
+       margin: 3rem 1.5rem 3rem 0;
+       transition: 1s ease;
+       }
+       .loc:hover{
+        background: var(--main-color);
+        color: var(--second-bg-color);
+        box-shadow: 0 0 1rem var(--main-color);
+       }
+       
        footer:not(.footer-text){
         display: flex;
         justify-content: space-between;
@@ -551,7 +571,7 @@ section#buttons{
        height: 4rem;
        border: .2rem solid var(--main-color);
        margin: 3rem 1.5rem 3rem 0;
-       transition: .5s ease;
+       transition: 1s ease;
     }
 
     .footer-iconTop a:hover {
@@ -565,3 +585,4 @@ section#buttons{
         right: 50px;
         margin-top: 120px;
     }
+    
