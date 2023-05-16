@@ -68,3 +68,32 @@ for (var i = 0; i < buttons.length; i++) {
     this.style.boxShadow = 'rgb(14, 178, 184) 0px 0px 1.8px 0.5px'
   });
 }
+
+// SCROOLL TO BOTTOM=========================================================
+const scrollToBottom = document.querySelector('.loc a');
+
+scrollToBottom.addEventListener('click', e => {
+  e.preventDefault();
+  const targetPosition = document.documentElement.scrollHeight - window.innerHeight;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const duration = 1000;
+  let start = null;
+
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    const progress = timestamp - start;
+    window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+    if (progress < duration) window.requestAnimationFrame(step);
+  }
+
+  window.requestAnimationFrame(step);
+});
+
+function easeInOutCubic(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return c / 2 * t * t * t + b;
+  t -= 2;
+  return c / 2 * (t * t * t + 2) + b;
+}
+

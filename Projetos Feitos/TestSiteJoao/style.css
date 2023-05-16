@@ -30,6 +30,7 @@ body {
     color: black;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    padding-bottom: 0px
 }
 
 section:not(#buttons, #abordagem) {
@@ -45,7 +46,7 @@ section:not(#buttons, #abordagem) {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background-color: var(--bg-color);
+    background: linear-gradient(to left, #8ba9c4, #525769);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,7 +60,10 @@ section:not(#buttons, #abordagem) {
     font-weight: 600;
     cursor: default;
 }
-
+.img-navbar img{
+    height: 60px;
+    width: 250px;
+}
 .navbar a{
     font-size: 1.7rem;
     color: var(--text-color);
@@ -444,7 +448,9 @@ section#buttons{
 
 
 /* =========================================================================================================== */
-
+#contato{
+    
+}
     
     .contato-container{
         display: flex;
@@ -454,7 +460,7 @@ section#buttons{
     .contato h2{
         font-size: 4rem;
         font-weight: 700;
-        margin-top: 15rem;
+        margin-top: 10rem;
     }
     .contato textarea{
         height: 15rem;
@@ -466,12 +472,25 @@ section#buttons{
         text-align: center;
     
     }
-    
+    .bloco-contato{
+        width: 100%;
+        display: flex;
+        position: relative;
+        margin-bottom: -10px;
+        padding-bottom: 0px;
+    }
+    .bloco-contato form{
+        justify-content: center;
+        padding-right: 20px;
+        padding-bottom: 0px;
+        width: 40%;
+    }
     .contato form{
         max-width: 70rem;
+        width: 600px;
         margin: 1rem auto;
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 0;
         align-items: flex-end;
     }
     
@@ -483,7 +502,7 @@ section#buttons{
     
     .contato form .input-box input, .contato form textarea{
         width: 100%;
-        padding: 1.5rem;
+        padding: 1rem;
         font-size: 1.6rem;
         color: var(--text-color);
         background: var(--second-bg-color);
@@ -528,27 +547,39 @@ section#buttons{
         background-color: hsl(145, 80%, 48%);
         color: hsl(0, 0%, 100%);
        }
-
        .loc{
-        font-size: 3rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+       }
+
+
+       .loc a{
+        font-size: 6rem;
         color: var(--main-color);
         border-radius: 50%;
        display: inline-flex;
        align-items: center;
        justify-content: space-evenly;
        background: transparent;
-       width: 4rem;
-       height: 4rem;
+       width: 6rem;
+       height: 6rem;
        border: .2rem solid var(--main-color);
        margin: 3rem 1.5rem 3rem 0;
-       transition: 1s ease;
+       transition: .5s ease;
        }
-       .loc:hover{
+       .loc a:hover{
         background: var(--main-color);
         color: var(--second-bg-color);
         box-shadow: 0 0 1rem var(--main-color);
        }
        
+       .footer{
+       height: 90px;
+        width: 100%;
+        background: linear-gradient(to left, #8ba9c4, #525769);
+       }
        footer:not(.footer-text){
         display: flex;
         justify-content: space-between;
@@ -557,32 +588,39 @@ section#buttons{
         padding: 2rem 9%;
         background: var(--second-bg-color);
         
+        
     }
-    
-    .footer-iconTop a{
-        font-size: 3rem;
-        color: var(--main-color);
+    .footer-iconTop {
+        display: flex;
+        justify-content: flex-start;
+      }
+      
+      .footer-iconTop a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4rem;
+        height: 5rem;
+        width: 5rem;
+        background: transparent;
         border-radius: 50%;
-       display: inline-flex;
-       align-items: center;
-       justify-content: space-evenly;
-       background: transparent;
-       width: 4rem;
-       height: 4rem;
-       border: .2rem solid var(--main-color);
-       margin: 3rem 1.5rem 3rem 0;
-       transition: 1s ease;
-    }
-
-    .footer-iconTop a:hover {
+        border: 0.2rem solid var(--main-color);
+        color: var(--main-color);
+        transition: 1s ease-in-out;
+        margin-right: 1rem;
+      }
+      
+      .footer-iconTop a:hover {
         background: var(--main-color);
-        color: var(--second-bg-color);
+        color: var(--text-color);
         box-shadow: 0 0 1rem var(--main-color);
-    }
+        transform: scale(1.2);
+      }
+      
     .footer-text{
         display: block;
         position: absolute;
         right: 50px;
-        margin-top: 120px;
+        margin-top: 10px;
     }
     
