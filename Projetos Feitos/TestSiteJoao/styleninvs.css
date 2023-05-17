@@ -38,7 +38,7 @@ header{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url("/img-botox/parallax1.png");
+    background-image: url("/img-radiofrequltrcav/radiofreq1..png");
         height: 100vh;
 display: flex;
 flex-direction: column;
@@ -83,10 +83,12 @@ flex-direction: column;
     height: 500px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
     color: var(--main-color);
     margin-left: 40px;
-    font-size: 50px;
+    font-size: 45px;
 }
 section#sobre,#utilidade{
     height: 90vh;
@@ -115,21 +117,16 @@ section#sobre,#utilidade{
 }
 
 .parallax1{
-    background-image: url("/img-botox/parallax3.png");
+    background-image: url("/img-radiofrequltrcav/radiofreq2.png");
 }
 
 
 
 .parallax2{
-    background-image: url("/img-botox/parallax2.png");
+    background-image: url("/img-radiofrequltrcav/ultracav.png");
 }
 
-.parallax3{
-    background-image: url("/img-botox/parallax2.png");
-}
-.parallax4{
-    background-image: url("/img-botox/parallax2.png");
-}
+
 .txbot{
     background: var(--second-bg-color);
     display: flex;
@@ -144,7 +141,7 @@ section#sobre,#utilidade{
     height: auto;
 }
 .txbotox h2{
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 700;
 }
 .txbotox p{
@@ -162,7 +159,10 @@ section#sobre,#utilidade{
 }
 
 
-
+.txbotox h1{
+    font-size: 45px;
+    font-weight: 700;
+}
 .txbotox1 h2{
     font-size: 45px;
     font-weight: 700;
@@ -173,7 +173,7 @@ section#sobre,#utilidade{
     font-size: 30px;
     margin-top: 30px;
 }
-#bloco1, #bloco2, #bloco3, #bloco4{
+#bloco1{
     height: 100vh;
     background: var(--second-bg-color);
 }
@@ -195,21 +195,8 @@ section#sobre,#utilidade{
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
  }
  
- #bloco2 .img-container{
-        position: relative;
-        z-index: 2; 
- }
- #bloco2 .txt-container{
-    position: relative;
-  z-index: 1;
- }
- #bloco4 .img-container{
-    width: 52%;
- }
 
- #bloco3 .img-container{
-    width: 55.5%;
- }   
+
  .txt-container{
     width: 600px;
     display: flex;
@@ -239,20 +226,23 @@ box-shadow: 0px 0px 50px #2d4d69,
       transform: translateY(0);
     }
   }
- .txt-container h2{
-    font-size: 4rem;
-    font-weight: 700;
+  .card1 h2{
+    font-size: 2.8rem;
+    width: 100%;
 
- }
+  }
 
  .txt-container p{
     font-size: 2rem;
     font-weight: 500;
+    margin-left: 40px;
+ }
+ .txt-container ul{
+    font-size: 15px;
+    padding-left: 80px;
  }
  
- #bloco2, #bloco4 .txt-container{
-    margin-left: 50px;
- }
+/* ======================================================================================================================== */
  footer{
    background: linear-gradient(to right, #2f3d49, #525769)
  }
@@ -266,9 +256,7 @@ box-shadow: 0px 0px 50px #2d4d69,
      align-items: center;
      flex-wrap: wrap;
      padding: 2rem 9%;
-     
-     
-     
+    
  }
  .footer-iconTop {
      display: flex;

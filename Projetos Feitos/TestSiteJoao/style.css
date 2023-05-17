@@ -64,6 +64,8 @@ section:not(#buttons, #abordagem) {
     height: 60px;
     width: 250px;
 }
+
+
 .navbar a{
     font-size: 1.7rem;
     color: var(--text-color);
@@ -448,9 +450,7 @@ section#buttons{
 
 
 /* =========================================================================================================== */
-#contato{
-    
-}
+
     
     .contato-container{
         display: flex;
@@ -553,7 +553,6 @@ section#buttons{
         left: 0;
 
        }
-
 
        .loc a{
         font-size: 6rem;
