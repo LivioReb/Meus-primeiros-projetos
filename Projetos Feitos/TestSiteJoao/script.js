@@ -5,9 +5,9 @@ ScrollReveal({
     delay: 200
 });
 
-ScrollReveal().reveal('.home-text, .sobre-text, abordagem-img', { origin: 'top' });
-ScrollReveal().reveal('.intersection, .container-box, .btn', { origin: 'bottom' });
-ScrollReveal().reveal('.home-text h1, .img-sobre, .sobre-text h1, .input-box, .servicos-container h2', { origin: 'left' });
+ScrollReveal().reveal('.home-text, .sobre-text, abordagem-img, .heading', { origin: 'top' });
+ScrollReveal().reveal('.intersection, .container-box, .btn, .mapa', { origin: 'bottom' });
+ScrollReveal().reveal('.home-text h1, .img-sobre, .sobre-text h1, .input-box, .servicos-container h2, .lado-esquerdo', { origin: 'left' });
 ScrollReveal().reveal('.img-home, .home-text h2, .home-text p, .sobre-text h2, .abordagem p, textarea, .servicos-container p', { origin: 'right' });
 
 //=====================================================================================================================================================================

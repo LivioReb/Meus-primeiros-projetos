@@ -85,7 +85,19 @@ header {
     justify-content: space-evenly;
     align-items: center;
 }
-.lado-esquerdo{
+
+@keyframes floating {
+   0% {
+     transform: translateY(0);
+   }
+   50% {
+     transform: translateY(-25px);
+   }
+   100% {
+     transform: translateY(0);
+   }
+ }
+ .lado-esquerdo{
     margin-top: 45px;
     width: 40%;
     display: flex;
@@ -95,6 +107,7 @@ header {
     border-radius: 20px;
     justify-content: center;
     flex-direction: column;
+    animation: floating 5s ease-in-out infinite; 
 }
 .lado{
     padding-top: 20px;  
