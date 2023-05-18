@@ -351,12 +351,13 @@ box-shadow: 0px 0px 50px #2d4d69,
   /* =============================================================================================== */
   /* =============================================================================================== */
   @media (max-width: 375px){
-    header img{
-        display: none;
+    
+    .navbar img{
+        width: 100px;
     }
     .navbar{
         width: 100%;
-        display: block;
+        display: flex;
         text-align: center;
         
     }

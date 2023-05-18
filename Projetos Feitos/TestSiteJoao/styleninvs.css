@@ -298,7 +298,7 @@ box-shadow: 0px 0px 50px #2d4d69,
   /* =============================================================================================== */
   @media (max-width: 375px){
     header img{
-        display: none;
+        display: ;
     }
     .navbar{
         width: 100%;

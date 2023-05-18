@@ -304,8 +304,10 @@ box-shadow: 0px 0px 50px #2d4d69,
      margin-top: 10px;
  }
  @media (max-width: 375px){
-    header img{
-        display: none;
+
+    .home-logo-mobile{
+        display: flex;
+        width: 100px;
     }
     .navbar{
         width: 100%;
