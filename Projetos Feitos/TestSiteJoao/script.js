@@ -96,4 +96,15 @@ function easeInOutCubic(t, b, c, d) {
   t -= 2;
   return c / 2 * (t * t * t + 2) + b;
 }
+//============================================================================================
+
+function toggleMenu() {
+  var navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('active');
+
+  var menuIcon = document.getElementById('menu-icon');
+  var closeIcon = document.getElementById('close-icon');
+  menuIcon.style.display = menuIcon.style.display === 'none' ? 'block' : 'none';
+  closeIcon.style.display = closeIcon.style.display === 'none' ? 'block' : 'none';
+}
 

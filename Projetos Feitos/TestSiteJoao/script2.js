@@ -13,3 +13,6 @@ ScrollReveal().reveal('.txbotox p, .parallax1 p, .parallax2 h2, .card1 h2, .card
 
 window.sr = ScrollReveal({ reset:true});
 sr.reveal('.parallax1 h1, .parallax2 h1, .parallax3 h1', { duration: 4000 });
+
+
+
